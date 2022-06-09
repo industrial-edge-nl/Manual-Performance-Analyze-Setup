@@ -114,7 +114,9 @@ Setup the network settings  on edge device
 ## Dataservice 
 1. Open Dataservice - on edge device.
 2. Go set the adapter, connect the s7 adapter
+
 ![Dataservice](files/edgedevice-dataservice-1.JPG)
+
 3. Fill in fields:
    - name: s7 connector (default)
    - url: tcp://ie-databus:1883
@@ -124,16 +126,22 @@ Setup the network settings  on edge device
 4. Click save
 5. And enable the new adapter, check if it is connected.
 6. Add child asset to edge : "TankProcess" 
+
 ![Dataservice](files/edgedevice-dataservice-2.JPG)
+
 8. Click on TankProcess and add multiple aspects
 9. Add the following aspects
+
 ![Dataservice](files/edgedevice-dataservice-3.JPG)
+
   - 1 fillingtank, aspect type stepChainAnalysis_initialStep
   - 2 heatingtank , aspect type StepChainAnalysis_Step
   - 3 fillingbottle , aspect type StepChainAnalysis_Step
   - 4 shiftingbottle, aspect type StepChainAnalysis_Step
 10. add the following tags to the variables in the connectivity tab.
+
 ![Dataservice](files/edgedevice-dataservice-4.JPG)
+
   - 1 activeState 1 fillingTank -> GDB.operate.state.FillingTank
   - 2 activeState 2 heatingtank -> GDB.operate.state.HeatingTank
   - 3 activeState 3 fillingbottle -> GDB.operate.state.FillingBottle
