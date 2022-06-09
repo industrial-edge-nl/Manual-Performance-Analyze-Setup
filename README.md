@@ -14,7 +14,7 @@ Setting up Energy manager on Industrial Edge Device
     * [Simatic S7 Connector](#simatic-s7-connector)
     * [IE databus](#ie-databus)
     * [Flow Creator](#flow-creator)
-    * [Machine Insight](#machine-insight)
+    * [Performance insight](performance-insight)
 
 
 
@@ -35,7 +35,7 @@ Setting up Energy manager on Industrial Edge Device
     - IE Databus - Is used as data channel - MQTT broker      
     - SIMATIC S7 Connector - used for data retrieve from plc   
     - Flow Creator - Debugging of dataflow
-    - Machine Insight - Watching the state of the machine
+    - Performance insight - Watching the state of the machine
       
 - OT Level PLC
   - [Uses Tia Tank sample application](https://github.com/industrial-edge/miscellaneous#tank-application)
@@ -63,7 +63,7 @@ Setting up Energy manager on Industrial Edge Device
 Install the required apps on edge device
 - Simatic s7 Connector 
 - IE Databus 
-- Machine inishgt
+- Performance insight
 - Data Service
 - flow creator
  
@@ -122,14 +122,23 @@ Setup the network settings  on edge device
    - password: edge
    - metadata: ie/d/j/simatic/v1/s7c1/dp/   (default)
 4. Click save
-5. and enable the new adapter, check if it is connected.
-6. Add child asset to edge : "Plant" 
-7. Add child asset to plant : "Energy" 
+5. And enable the new adapter, check if it is connected.
+6. Add child asset to edge : "TankProcess" 
 ![Dataservice](files/edgedevice-dataservice-2.JPG)
-8. Click on Energy Asset, and add multiple variables
-9. Type in search: GDB.signals.energy
-10. Select all the 4 tags. and save. > accept.
+8. Click on TankProcess and add multiple aspects
+9. Add the following aspects
+![Dataservice](files/edgedevice-dataservice-3.JPG)
+  - 1 fillingtank, aspect type stepChainAnalysis_initialStep
+  - 2 heatingtank , aspect type StepChainAnalysis_Step
+  - 3 fillingbottle , aspect type StepChainAnalysis_Step
+  - 4 shiftingbottle, aspect type StepChainAnalysis_Step
+10. add the following tags to the variables in the connectivity tab.
+![Dataservice](files/edgedevice-dataservice-4.JPG)
+  - 1 activeState 1 fillingTank -> GDB.operate.state.FillingTank
+  - 2 activeState 2 heatingtank -> GDB.operate.state.HeatingTank
+  - 3 activeState 3 fillingbottle -> GDB.operate.state.FillingBottle
+  - 4 activeState 4 shiftingbottle -> GDB.operate.state.ShiftingBottle
 
 
-## Energy Manager
-Machine insight
+## Performance insight
+1. Open Performance Insight - on edge device.
