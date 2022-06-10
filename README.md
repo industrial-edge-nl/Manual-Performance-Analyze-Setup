@@ -14,7 +14,7 @@ Setting up Energy manager on Industrial Edge Device
     * [Simatic S7 Connector](#simatic-s7-connector)
     * [IE databus](#ie-databus)
     * [Flow Creator](#flow-creator)
-    * [Performance insight](performance-insight)
+    * [Performance insight](#performance-insight)
 
 
 
@@ -75,14 +75,22 @@ Setup the network settings  on edge device
 
 ## Simatic s7 Connector
 1. Open the Industrial Edge Management - Go to Data Connections - Select the Simatic S7 connector
+
 ![s7connector1](files/edgedevice-s7-connector-1.JPG)
+
 2. Launch on the Southbound device - select S7 or OPCUA (we use opcua) - add data Source 
+
 ![s7connector2](files/edgedevice-s7-connector-2-add-opcua.JPG)
+
 3. Fill in the ip adress and port 192.168.0.10 port 4840 and save
 4. Set the settings - use username: edge and password: edge, then press save.
+
 ![s7connector3](files/edgedevice-s7-connector-3-settings.JPG)
+
 5. A new row should be available in the list, press browse tags, all the tags should be read from the datasource. add all from the database GBD.
+
 ![s7connector3](files/edgedevice-s7-connector-4-browse.JPG)
+
 6. Deploy and start project, wait until done.
 
 ## IE Databus
@@ -102,13 +110,17 @@ Setup the network settings  on edge device
     - security - user: edge
     - security - password: edge
     - click on save
-    - ![flowcreator1](files/edgedevice-flow-creator-1.JPG)
+
+![flowcreator1](files/edgedevice-flow-creator-1.JPG)
+
 4. set topic:
     - ie/#
     - click on done.
 5. add message node and connect, then deploy.
 6. check if data is flowing in debug window.
+
 ![flowcreator2](files/edgedevice-flow-creator-2.JPG)
+
 
 
 ## Dataservice 
@@ -138,7 +150,7 @@ Setup the network settings  on edge device
   - 2 heatingtank , aspect type StepChainAnalysis_Step
   - 3 fillingbottle , aspect type StepChainAnalysis_Step
   - 4 shiftingbottle, aspect type StepChainAnalysis_Step
-10. add the following tags to the variables in the connectivity tab.
+10. edit the following tags to the variables in the connectivity tab.
 
 ![Dataservice](files/edgedevice-dataservice-4.JPG)
 
