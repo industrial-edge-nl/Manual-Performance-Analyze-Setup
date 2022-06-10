@@ -178,3 +178,5 @@ Setup the network settings  on edge device
 ![Dataservice](files/edgedevice-perf-insight-3.JPG)
 
 5. Go to My plant > tank process and wait for the results.
+
+![Dataservice](files/edgedevice-perf-insight-4.JPG)
