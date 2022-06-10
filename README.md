@@ -162,8 +162,19 @@ Setup the network settings  on edge device
 
 ## Performance insight
 1. Open Performance Insight - on edge device.
-2. Open the Asset TankProccess
+2. Open the Asset TankProccess > Click on define limits.
 
 ![Dataservice](files/edgedevice-perf-insight-1.JPG)
 
-3. 
+3. Select the product 'Not Assigned'
+
+![Dataservice](files/edgedevice-perf-insight-2.JPG)
+
+4. Set the
+  - Name TankFillingSteps
+  - Actual step time limits on all to 20s 
+  - Save
+
+![Dataservice](files/edgedevice-perf-insight-3.JPG)
+
+5. Go to My plant > tank process and wait for the results.
