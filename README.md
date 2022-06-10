@@ -1,6 +1,6 @@
 # Energy Manager Setup manual
-Setting up Energy manager on Industrial Edge Device
-[Official documentation](https://github.com/industrial-edge/energy-manager-getting-started)
+Setting up Performance Analytics on Industrial Edge Device
+[Official documentation](https://github.com/industrial-edge/Performance-Analytics)
 
 ## index
 
@@ -162,3 +162,8 @@ Setup the network settings  on edge device
 
 ## Performance insight
 1. Open Performance Insight - on edge device.
+2. Open the Asset TankProccess
+
+![Dataservice](files/edgedevice-perf-insight-1.JPG)
+
+3. 
